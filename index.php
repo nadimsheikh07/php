@@ -31,6 +31,10 @@ $listitems[] = [
     "name" => "Null",
     "link" => "null.php"
 ];
+$listitems[] = [
+    "name" => "Prime Number",
+    "link" => "prime_number.php"
+];
 
 $listitems[] = [
     "name" => "Pyramid",
