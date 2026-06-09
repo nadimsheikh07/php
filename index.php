@@ -18,6 +18,11 @@ $listitems[] = [
 ];
 
 $listitems[] = [
+    "name" => "Count Class Object",
+    "link" => "/count_class_object.php"
+];
+
+$listitems[] = [
     "name" => "Interface",
     "link" => "/interface.php"
 ];
