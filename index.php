@@ -8,6 +8,11 @@ $listitems[] = [
 ];
 
 $listitems[] = [
+    "name" => "Array",
+    "link" => "/array.php"
+];
+
+$listitems[] = [
     "name" => "Binary Search",
     "link" => "/binary_search.php"
 ];
