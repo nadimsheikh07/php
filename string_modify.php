@@ -26,4 +26,8 @@ print_r($y);
 echo "<br/>";
 
 echo str_repeat($x, 2);
+echo "<br/>";
+echo substr($x, 6, 5);
+echo "<br/>";
+
 ?>

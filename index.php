@@ -1,41 +1,46 @@
 <?php
 
-echo "1. Standard Pyramid (Nested Loops)";
-echo "<br/>";
+$listitems = array();
 
-$rows = 5;
+$listitems[] = [
+    "name" => "Abstract Class",
+    "link" => "/abstract.php"
+];
 
-for ($i = 1; $i <= $rows; $i++) {
-    // 1. Print leading spaces
-    for ($j = $rows; $j > $i; $j--) {
-        echo "&nbsp;&nbsp;";
-    }
-    // 2. Print stars (2 * $i - 1 ensures an odd number of stars per row)
-    for ($k = 1; $k <= (2 * $i - 1); $k++) {
-        echo "*";
-    }
-    // 3. Move to the next line
-    echo "<br/>";
+$listitems[] = [
+    "name" => "Interface",
+    "link" => "/interface.php"
+];
 
+$listitems[] = [
+    "name" => "Null",
+    "link" => "null.php"
+];
+
+$listitems[] = [
+    "name" => "Pyramid",
+    "link" => "pyramid.php"
+];
+
+$listitems[] = [
+    "name" => "Scope",
+    "link" => "scope.php"
+];
+
+$listitems[] = [
+    "name" => "String Functions",
+    "link" => "string_functions.php"
+];
+
+$listitems[] = [
+    "name" => "String Modify",
+    "link" => "string_modify.php"
+];
+
+echo "<ul>";
+foreach ($listitems as $item) {
+    echo "<li><a href='" . $item["link"] . "'>" . $item["name"] . "</a></li>";
 }
+echo "</ul>";
 
-
-echo "2. The Clean Way (Using str_repeat)";
-echo "<br/>";
-
-for ($i = 1; $i <= $rows; $i++) {
-    $spaces = str_repeat("&nbsp;&nbsp;", $rows - $i);
-    $stars = str_repeat("*", (2 * $i) - 1);
-
-    echo $spaces . $stars;
-    echo "<br/>";
-}
-
-echo "3. Left-Aligned Half Pyramid";
-echo "<br/>";
-
-for ($i = 1; $i <= $rows; $i++) {
-    echo str_repeat("*", $i);
-    echo "<br/>";
-}
 ?>
