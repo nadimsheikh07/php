@@ -23,6 +23,11 @@ $listitems[] = [
 ];
 
 $listitems[] = [
+    "name" => "Factorial",
+    "link" => "/factorial.php"
+];
+
+$listitems[] = [
     "name" => "Interface",
     "link" => "/interface.php"
 ];
