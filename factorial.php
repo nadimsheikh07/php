@@ -11,12 +11,16 @@ function getFactorial(int $number): int
         $result *= $i;
     }
 
-    return $result;
+    return (int) $result;
 }
 
-// Example usage:
-echo json_encode([
-    'input' => 5,
-    'factorial' => getFactorial(5) // Outputs 120
-]);
+$data = [];
+
+for ($i = 1; $i <= 100; $i++) {
+    if (getFactorial($i)) {
+        $data[$i] = getFactorial($i);
+    }
+}
+
+echo json_encode($data, JSON_PRETTY_PRINT);
 ?>
