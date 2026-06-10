@@ -2,22 +2,22 @@
 
 function isPrime(int $number): bool
 {
-    // Numbers less than or equal to 1 are not prime
+    // 1 and below are not prime
     if ($number <= 1) {
         return false;
     }
-    // 2 is the only even prime number
+    // 2 is the only even prime
     if ($number === 2) {
         return true;
     }
-    // Exclude all other even numbers instantly
+    // Exclude all other even numbers
     if ($number % 2 === 0) {
         return false;
     }
 
-    // Check odd factors up to the square root of the number
-    $maxCheck = sqrt($number);
-    for ($i = 3; $i <= $maxCheck; $i += 2) {
+    // Check only odd factors up to the square root
+    $squareRoot = sqrt($number);
+    for ($i = 3; $i <= $squareRoot; $i += 2) {
         if ($number % $i === 0) {
             return false;
         }
@@ -26,8 +26,14 @@ function isPrime(int $number): bool
     return true;
 }
 
-// Example usage:
-var_dump(isPrime(7)); // Outputs: bool(true)
-var_dump(isPrime(4));  // Outputs: bool(false)
+$primeNumbers = [];
 
+// Start at 2 since 0 and 1 are never prime
+for ($i = 2; $i <= 100; $i++) {
+    if (isPrime($i)) {
+        $primeNumbers[] = $i;
+    }
+}
+
+echo json_encode($primeNumbers);
 ?>
